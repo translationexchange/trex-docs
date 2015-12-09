@@ -1,0 +1,173 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="main-header no-cover">
+	<nav class="main-nav clearfix">
+        {{#if @blog.logo}}
+			<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
+        {{/if}}
+	</nav>
+	<div class="vertical clearfix">
+		<div class="main-header-content inner">
+			<h1 class="page-title">Documentation</h1>
+			<h2 class="page-description" data-default-text="Getting started? Try our quick guides.">Getting started? Try our quick guides.</h2>
+			<div class="tx-breadcrumbs">
+				<a href="/" data-action="home">Documentation</a>
+				<i>&nbsp;&nbsp;>&nbsp;&nbsp;</i>
+				<span></span>
+			</div>
+            <div class="clearfix"></div>
+            {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:quick-guide"}}
+				<ul class="tx-quick-guide-categories tx-unstyled tx-inline">
+                    {{#foreach posts}}
+                        {{#has tag="category"}}
+							<li data-tags="{{ tags autolink='false' }}" class="tx-hover">
+								<div class="tx-logo">
+									<figure style="background-image:url({{image}})"></figure>
+								</div>
+								<h5>{{title}}</h5>
+								<section>
+                                    {{{markdown}}}
+								</section>
+								<button class="btn btn-blue">Launch Quick Start</button>
+							</li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+				<ul class="tx-quick-guide-platforms tx-platforms tx-unstyled tx-inline">
+                    {{#foreach posts}}
+                        {{#has tag="platform"}}
+							<li data-tags="{{ tags autolink='false' }}">
+								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
+									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
+								</a>
+								<a class="tx-label" href="{{slug}}">{{title}}</a>
+							</li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+            {{/get}}
+		</div>
+
+	</div>
+</header>
+
+<nav class="tx-page-nav">
+	<div class="inner">
+        {{#get "posts" limit="all" order="tags asc" filter="tag:navigation"}}
+			<ul class="tx-unstyled tx-inline clearfix">
+                {{#foreach posts}}
+					<li><a href="{{meta 'url-hash'}}" {{#if @first}}class="selected"{{/if}}>{{title}}</a></li>
+                {{/foreach}}
+			</ul>
+        {{/get}}
+	</div>
+</nav>
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+	<section>
+		<div class="inner">
+			<a name="sdk"></a>
+            {{#get "posts" limit="all" order="title asc" include="tags" filter="tag:sdk"}}
+                {{#foreach posts}}
+                    {{#has tag="navigation"}}
+						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+                    {{/has}}
+                {{/foreach}}
+				<ul class="tx-unstyled tx-inline tx-platforms clearfix">
+                    {{#foreach posts}}
+                        {{^has tag="navigation"}}
+							<li data-tags="{{ tags autolink='false' }}">
+								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
+									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
+								</a>
+								<a class="tx-label" href="{{slug}}">{{title}}</a>
+							</li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+            {{/get}}
+		</div>
+	</section>
+
+	<section>
+		<div class="inner">
+			<a name="how-to"></a>
+            {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:how-to"}}
+                {{#foreach posts}}
+                    {{#has tag="navigation"}}
+						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+                    {{/has}}
+                {{/foreach}}
+				<ul class="tx-unstyled tx-inline tx-grid-item tx-how-to clearfix">
+                    {{#foreach posts}}
+                        {{^has tag="navigation"}}
+		                    <li>
+			                    <a href="{{slug}}" class="tx-hover">
+				                    <i class="fa fa-lightbulb-o"></i>
+				                    <h5>{{title}}</h5>
+				                    <p>{{meta_description_attr}}</p>
+			                    </a>
+		                    </li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+            {{/get}}
+		</div>
+	</section>
+
+	<section>
+		<div class="inner">
+			<a name="tml"></a>
+            {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:tml"}}
+                {{#foreach posts}}
+                    {{#has tag="navigation"}}
+						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+                    {{/has}}
+                {{/foreach}}
+				<ul class="tx-unstyled tx-inline tx-grid-item clearfix">
+                    {{#foreach posts}}
+                        {{^has tag="navigation"}}
+							<li>
+								<a href="{{slug}}">
+									<i class="fa fa-file-code-o"></i>
+									<h5>{{title}}</h5>
+									<p>{{excerpt words="13"}} ...</p>
+								</a>
+							</li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+            {{/get}}
+		</div>
+	</section>
+
+	<section>
+		<div class="inner">
+			<a name="help"></a>
+            {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:help"}}
+                {{#foreach posts}}
+                    {{#has tag="navigation"}}
+						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+                    {{/has}}
+                {{/foreach}}
+				<ul class="tx-unstyled tx-inline tx-grid-item clearfix">
+                    {{#foreach posts}}
+                        {{^has tag="navigation"}}
+							<li>
+								<a href="{{slug}}">
+                                    <i class="{{meta 'icon'}}"></i>
+									<h5>{{title}}</h5>
+									<p>{{excerpt words="100"}}</p>
+								</a>
+							</li>
+                        {{/has}}
+                    {{/foreach}}
+				</ul>
+            {{/get}}
+		</div>
+	</section>
+
+</main>
