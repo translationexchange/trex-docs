@@ -6,7 +6,7 @@
 module.exports = function (name) {
     if (!this.html) return '';
 
-    var rx = new RegExp('<meta\\s+name=["\']{0,1}' + name + '["\']{0,1}\\s+content=["\']{0,1}([a-z\\-\\:/\\s#\\,\\.]+)', 'i'),
+    var rx = new RegExp('<meta\\s+name=["\']{0,1}' + name + '["\']{0,1}\\s+content=["\']{0,1}([a-z\\-\\:/\\s#\\,\\.\\(\\)]+)', 'i'),
         matches = this.html.match(rx);
 
     if (!matches) return '';

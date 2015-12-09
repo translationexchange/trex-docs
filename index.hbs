@@ -22,7 +22,7 @@
 				<ul class="tx-quick-guide-categories tx-unstyled tx-inline">
                     {{#foreach posts}}
                         {{#has tag="category"}}
-							<li data-tags="{{ tags autolink='false' }}" class="tx-hover">
+							<li data-platform-tip="{{meta 'platform-tip'}}" data-type="{{meta 'type'}}" class="tx-hover">
 								<div class="tx-logo">
 									<figure style="background-image:url({{image}})"></figure>
 								</div>
@@ -38,11 +38,11 @@
 				<ul class="tx-quick-guide-platforms tx-platforms tx-unstyled tx-inline">
                     {{#foreach posts}}
                         {{#has tag="platform"}}
-							<li data-tags="{{ tags autolink='false' }}">
+							<li data-type="{{meta 'type'}}">
 								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
 									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
 								</a>
-								<a class="tx-label" href="{{slug}}">{{title}}</a>
+								<a class="tx-label" href="{{slug}}">{{meta 'label'}}</a>
 							</li>
                         {{/has}}
                     {{/foreach}}
@@ -83,7 +83,7 @@
 								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
 									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
 								</a>
-								<a class="tx-label" href="{{slug}}">{{title}}</a>
+								<a class="tx-label" href="{{slug}}">{{meta 'label'}}</a>
 							</li>
                         {{/has}}
                     {{/foreach}}

@@ -4,9 +4,9 @@
         $description = $('.page-description'),
         $platforms = $('.tx-quick-guide-platforms');
 
-    function showPlatforms(about) {
-        var $selectedPlatforms = $platforms.find('[data-about=' + about + ']'),
-            $selectedCategory = $categories.find('li[data-about=' + about + ']'),
+    function showPlatforms(type) {
+        var $selectedPlatforms = $platforms.find('li[data-type=' + type + ']'),
+            $selectedCategory = $categories.find('li[data-type=' + type + ']'),
             tip = $selectedCategory.find('meta[name=platform-tip]').attr('content'),
             title = $selectedCategory.find('h5').text();
 
@@ -23,20 +23,11 @@
         $platforms.find('li').filter(':visible').hide();
     }
 
-    function setData() {
-        var $li = $(this),
-            about = $li.data('tags').match(/about\-[a-z\-]+/)[0];
-        $li.attr('data-about', about);
-    }
-
     function init() {
-        $categories.find('li').each(setData);
-
-        $platforms.find('li').each(setData);
-
-        if (window.location.hash) {
-            var about = window.location.hash.replace('#', '');
-            return showPlatforms('about-' + about);
+        var hash = window.location.hash;
+        if (hash && hash.match(/#platform-/)) {
+            var type = window.location.hash.replace('#platform-', '');
+            return showPlatforms(type);
         }
 
         $categories.fadeIn();
@@ -45,11 +36,11 @@
     function wire() {
         $categories.on('click', function (e) {
             var $li = $(e.target).closest('li'),
-                about = $li.data('about');
+                type = $li.data('type');
 
-            showPlatforms(about);
+            showPlatforms(type);
 
-            window.location.hash = about.replace('about-', '');
+            window.location.hash = 'platform-' + type;
         });
 
         window.onhashchange = function () {
