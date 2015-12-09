@@ -1,8 +1,9 @@
-(function ($) {
+(function ($, window, document) {
     var $breadcrumbs = $('.tx-breadcrumbs'),
         $categories = $('.tx-quick-guide-categories'),
         $description = $('.page-description'),
-        $platforms = $('.tx-quick-guide-platforms');
+        $platforms = $('.tx-quick-guide-platforms'),
+        quickGuideHash = '#quick-guide-';
 
     function showPlatforms(type) {
         var $selectedPlatforms = $platforms.find('li[data-type=' + type + ']'),
@@ -25,12 +26,21 @@
 
     function init() {
         var hash = window.location.hash;
-        if (hash && hash.match(/#platform-/)) {
-            var type = window.location.hash.replace('#platform-', '');
+
+        if (hash && hash.match(new RegExp(quickGuideHash))) {
+            var type = window.location.hash.replace(quickGuideHash, '');
             return showPlatforms(type);
         }
 
         $categories.fadeIn();
+    }
+
+    function reset() {
+        hidePlatforms();
+        $breadcrumbs.hide();
+        $categories.fadeIn();
+        // remove hash
+        window.history.pushState('', document.title, window.location.pathname);
     }
 
     function wire() {
@@ -40,18 +50,26 @@
 
             showPlatforms(type);
 
-            window.location.hash = 'platform-' + type;
+            window.location.hash = quickGuideHash + type;
+        });
+
+        $breadcrumbs.on('click', function (e) {
+            var action = $(e.target).data('action');
+
+            switch (action) {
+                case 'home':
+                    e.preventDefault();
+                    reset();
+                    break;
+            }
         });
 
         window.onhashchange = function () {
             if (window.location.hash) return;
-
-            hidePlatforms();
-            $breadcrumbs.hide();
-            $categories.fadeIn();
-        }
+            reset();
+        };
     }
 
     init();
     wire();
-})(jQuery);
+})(jQuery, window, document);

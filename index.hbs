@@ -79,7 +79,7 @@
 				<ul class="tx-unstyled tx-inline tx-platforms clearfix">
                     {{#foreach posts}}
                         {{^has tag="navigation"}}
-							<li data-tags="{{ tags autolink='false' }}">
+							<li>
 								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
 									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
 								</a>
