@@ -1,6 +1,7 @@
 /* overrides */
 .main-nav { position: static; margin: 0; padding: 20px 40px 10px; height: auto; border-bottom: solid 1px rgba(0, 0, 0, .05); background-color: #f5f8fa; }
 .vertical { display: block; padding: 20px 0 0; }
+.no-cover.main-header { min-height: 580px; }
 .main-header-content.inner h2 { margin-bottom: 20px; }
 .copyright { float: none; width: auto; text-align: center; }
 
