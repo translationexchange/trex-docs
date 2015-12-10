@@ -10,10 +10,9 @@ ul.tx-unstyled { margin: 0; padding: 0; list-style: none; }
 ul.tx-inline > li { float: left; }
 
 /*navigation*/
-.main-nav ul { float: left; }
-.main-nav ul > li { margin-left: 30px; line-height: 1em; font-weight: normal; font-size: 15px; }
-.main-nav ul > li > a { color: #999; }
-.main-nav ul > li > a:hover { color: #111; }
+.main-nav ul > li { margin-left: 30px; font-weight: normal; font-size: 15px; line-height: 1em; }
+.main-nav ul > li > a { opacity: 0.7 }
+.main-nav ul > .nav-log-in, .main-nav ul > .nav-sign-up { float: right; }
 
 /*headings*/
 h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 18px; }
