@@ -8,11 +8,19 @@
 
 <header class="main-header post-head no-cover">
     <nav class="main-nav clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}{{/if}}
+        <div class="inner">
+            {{#if @blog.logo}}
+                <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            {{/if}}
+            {{#if @blog.navigation }}
+                {{navigation}}
+            {{/if}}
+        </div>
     </nav>
     <nav class="tx-subnav clearfix">
-        {{> breadcrumbs }}
+        <div class="inner">
+            {{> breadcrumbs }}
+        </div>
     </nav>
 </header>
 

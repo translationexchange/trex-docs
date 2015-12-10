@@ -4,9 +4,14 @@
 {{! The big featured header }}
 <header class="main-header no-cover">
 	<nav class="main-nav clearfix">
-        {{#if @blog.logo}}
-			<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
-        {{/if}}
+        <div class="inner">
+            {{#if @blog.logo}}
+                <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
+            {{/if}}
+            {{#if @blog.navigation }}
+                {{navigation}}
+            {{/if}}
+        </div>
 	</nav>
 	<div class="vertical clearfix">
 		<div class="main-header-content inner">
