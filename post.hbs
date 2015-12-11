@@ -7,7 +7,7 @@
 {{#post}}
 
 <header class="main-header post-head no-cover">
-    <nav class="main-nav">
+    <nav class="main-nav clearfix">
         <div class="inner">
             {{#if @blog.logo}}
                 <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
@@ -19,7 +19,7 @@
     </nav>
     <nav class="tx-subnav clearfix">
         <div class="inner">
-            {{> breadcrumbs }}
+            {{> breadcrumbs  }}
         </div>
     </nav>
 </header>
@@ -38,7 +38,6 @@
         </section>
 
         <footer class="post-footer">
-
         </footer>
 
     </article>

@@ -26,7 +26,7 @@
             {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:quick-guide"}}
 				<ul class="tx-quick-guide-categories tx-unstyled tx-inline">
                     {{#foreach posts}}
-                        {{#has tag="category"}}
+                        {{#has tag="platform-category"}}
 							<li data-platform-tip="{{meta 'platform-tip'}}" data-type="{{meta 'type'}}" class="tx-hover">
 								<div class="tx-logo">
 									<figure style="background-image:url({{image}})"></figure>
