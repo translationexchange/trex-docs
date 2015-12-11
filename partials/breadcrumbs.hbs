@@ -1,11 +1,5 @@
 <div class="tx-breadcrumbs">
 	<a href="/" data-action="home">Documentation</a>
 	<i>&nbsp;&nbsp;>&nbsp;&nbsp;</i>
-	<a href="/#quick-guide-">
-        {{#get "posts" filter="slug:webapp" debug="true"}}
-            {{#foreach posts}}
-				{{title}}
-            {{/foreach}}
-        {{/get}}
-    </a>
+	<span>{{title}}</span>
 </div>
