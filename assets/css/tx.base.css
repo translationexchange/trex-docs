@@ -19,7 +19,7 @@ h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 1
 
 /* logo */
 .tx-logo { display: inline-block; width: 100px; height: 100px; border-radius: 50%; background: #fff; }
-.tx-logo > figure { width: 100%; height: 100%; background-position: 50%; background-size: 40%; background-repeat: no-repeat; }
+.tx-logo > figure { width: 100%; height: 100%; background-position: 50%; background-size: 50%; background-repeat: no-repeat; }
 .tx-logo.tx-logo-gradient { background: -webkit-linear-gradient(-56deg, #5c666f 0, #648aac 100%); background: linear-gradient(-56deg, #5c666f 0, #648aac 100%); }
 .tx-logo.tx-logo-generic { background: #eaeef3; }
 .tx-logo.tx-logo-generic > figure { background-image: url('../images/platform-generic.svg') }
@@ -30,8 +30,8 @@ h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 1
 .tx-logo.windows-phone { background: -webkit-linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); background: linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); }
 .tx-logo.node { background: -webkit-linear-gradient(top left, #78b743 40%, #9fe861 140%); background: linear-gradient(top left, #78b743 40%, #9fe861 140%); }
 .tx-logo.ruby-on-rails { background: -webkit-linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); background: linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); }
-.tx-logo.php { background: -webkit-linear-gradient(top left, #6d7bce 40%, #3b2862 140%); background: linear-gradient(top left, #6d7bce 40%, #3b2862 140%); }
-.tx-logo.angular > figure, .tx-logo.ember > figure, .tx-logo.react > figure, .tx-logo.php > figure, .tx-logo.ruby-on-rails > figure { background-size: 50%; }
+.tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony { background: -webkit-linear-gradient(top left, #6d7bce 40%, #3b2862 140%); background: linear-gradient(top left, #6d7bce 40%, #3b2862 140%); }
+.tx-logo.android > figure, .tx-logo.ios > figure, .tx-logo.windows-phone > figure { background-size: 40%; }
 .tx-logo.ios > figure { background-position: 48% 47%; }
 
 /* breadcrumbs */
