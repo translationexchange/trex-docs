@@ -27,21 +27,13 @@
 <main class="content" role="main">
     <article class="{{post_class}}">
         <nav>
-            <ul>
-	            <li>Left Nav</li>
-	            <li>Left Nav</li>
-	            <li>Left Nav</li>
-	            <li>Left Nav</li>
-	            <li>Left Nav</li>
-	            <li>Left Nav</li>
-            </ul>
+            {{> menu }}
         </nav>
 
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
                 <time class="tx-post-label" datetime="{{date updated_at format='YYYY-MM-DD'}}">{{date updated_at format="DD MMMM YYYY"}}</time>
-
             </section>
         </header>
 

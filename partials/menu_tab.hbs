@@ -1,0 +1,23 @@
+{{#get "posts" limit="all" order="title asc" include="tags" filter="tag:{{itemTag}}"}}
+    <div class="panel" role="tab">
+        {{#foreach posts}}
+            {{#has tag="navigation"}}
+                <div class="panel-title" data-parent="#tx-menu" data-toggle="collapse" data-target=".panel-{{slug}}" role="button">
+	                <h2>
+		                <a href="/#{{slug}}" data-action="title">
+                            {{meta 'label'}}
+		                </a>
+	                </h2>
+                </div>
+            {{/has}}
+        {{/foreach}}
+
+        {{#foreach posts}}{{#has tag="navigation"}}<ul class="panel-{{slug}} panel-collapse collapse" role="tabpanel">{{/has}}{{/foreach}}
+            {{#foreach posts}}
+                {{^has tag="navigation"}}
+                    <li><a href="/{{slug}}">{{title}}</a></li>
+                {{/has}}
+            {{/foreach}}
+        </ul>
+    </div>
+{{/get}}
