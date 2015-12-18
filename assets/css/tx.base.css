@@ -15,7 +15,7 @@ ul.tx-inline > li { float: left; }
 .main-nav ul > .nav-log-in, .main-nav ul > .nav-sign-up { float: right; }
 
 /* headings */
-h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 18px; }
+h2 > .tx-tip { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 18px; }
 
 /* logo */
 .tx-logo { display: inline-block; width: 100px; height: 100px; border-radius: 50%; background: #fff; }
@@ -24,13 +24,13 @@ h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 1
 .tx-logo.tx-logo-generic { background: #eaeef3; }
 .tx-logo.tx-logo-generic > figure { background-image: url('../images/platform-generic.svg') }
 .tx-logo.android { background: -webkit-linear-gradient(-220deg, #b0d949 23%, #83b830 100%); background: linear-gradient(-220deg, #b0d949 23%, #83b830 100%); }
-.tx-logo.angular { background: -webkit-linear-gradient(top left, #008bff 40%, #2c6fad 140%); background: linear-gradient(top left, #008bff 40%, #2c6fad 140%); }
-.tx-logo.ember { background: -webkit-linear-gradient(top left, #f46642 40%, #9c2202 140%); background: linear-gradient(top left, #f46642 40%, #9c2202 140%); }
+.tx-logo.angular { background: -webkit-linear-gradient(-220deg, #008bff 40%, #2c6fad 140%); background: linear-gradient(-220deg, #008bff 40%, #2c6fad 140%); }
+.tx-logo.ember { background: -webkit-linear-gradient(-220deg, #f46642 40%, #9c2202 140%); background: linear-gradient(-220deg, #f46642 40%, #9c2202 140%); }
 .tx-logo.react { background: -webkit-linear-gradient(-220deg, #3a5795 23%, #338bbc 100%); background: linear-gradient(-220deg, #3a5795 23%, #338bbc 100%); }
 .tx-logo.windows-phone { background: -webkit-linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); background: linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); }
-.tx-logo.node { background: -webkit-linear-gradient(top left, #78b743 40%, #9fe861 140%); background: linear-gradient(top left, #78b743 40%, #9fe861 140%); }
+.tx-logo.node { background: -webkit-linear-gradient(-220deg, #78b743 40%, #9fe861 140%); background: linear-gradient(-220deg, #78b743 40%, #9fe861 140%); }
 .tx-logo.ruby-on-rails { background: -webkit-linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); background: linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); }
-.tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony { background: -webkit-linear-gradient(top left, #6d7bce 40%, #3b2862 140%); background: linear-gradient(top left, #6d7bce 40%, #3b2862 140%); }
+.tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony { background: -webkit-linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); background: linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); }
 .tx-logo.android > figure, .tx-logo.ios > figure, .tx-logo.windows-phone > figure { background-size: 40%; }
 .tx-logo.ios > figure { background-position: 48% 47%; }
 
@@ -51,7 +51,11 @@ h2 > span { margin-left: 20px; color: #999; letter-spacing: normal; font-size: 1
 
 /* breadcrumbs */
 .tx-breadcrumbs { display: inline-block; font-size: 14px; }
+.tx-breadcrumbs > i { padding: 0 5px; font-style: normal; }
 .tx-breadcrumbs > a { text-decoration: none; }
+
+/* skip button */
+.tx-btn-skip { margin-left: 10px; display: none; }
 
 /* hovers */
 .tx-hover:hover { background: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1); -webkit-transition: background .1s cubic-bezier(.455, .03, .515, .955); transition: background .1s cubic-bezier(.455, .03, .515, .955); }

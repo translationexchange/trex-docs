@@ -10,8 +10,8 @@
 .tx-quick-guide-categories > li:hover > .tx-logo { background: #f5f8fa; }
 .tx-quick-guide-categories > li:hover > button { visibility: visible; }
 
-/* platforms */
-.tx-quick-guide-platforms > li { display: none; }
+/* platforms and api */
+.tx-quick-guide-platforms > li, .tx-quick-guide-api > li { display: none; }
 
 .tx-platforms { display: inline-block; }
 .tx-platforms > li { margin: 0 20px 10px 0; padding: 20px; min-height: 100px; text-align: center; text-align: center; font-size: 14px; -webkit-transition: transform 100ms; transition: transform 100ms; }
@@ -39,7 +39,7 @@ h2 { margin-bottom:30px; }
 /*grid*/
 .tx-grid-item > li { width: 325px; }
 .tx-grid-item > li > a { position: relative; display: block; padding: 30px 30px 30px 70px; min-height: 130px; text-decoration: none; }
-.tx-grid-item > li > a > i { position: absolute; top: 30px; left: 15px; font-size: 30px; padding: 5px; color: #aaa; transition: transform .15s, color .15s, border-color .15s; }
+.tx-grid-item > li > a > i { position: absolute; top: 30px; left: 15px; font-size: 30px; padding: 5px; color: #aaa; transition: transform .15s cubic-bezier(.455, .03, .515, .955), color .15s cubic-bezier(.455, .03, .515, .955), -webkit-transform .15s cubic-bezier(.455, .03, .515, .955); }
 .tx-grid-item > li > a:hover > i { transform: scale(1.15); color: #04c685; border-color: #04c685; }
 .tx-grid-item > li > a > p { font-size: 15px; line-height: 1.5em; }
 .tx-grid-item.tx-how-to > li > a > i { padding: 10px 14px; border: solid 1px #999; border-radius: 50%; font-size: 18px; color: #555; }

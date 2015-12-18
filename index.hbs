@@ -15,19 +15,28 @@
 	</nav>
 	<div class="vertical clearfix">
 		<div class="main-header-content inner">
-			<h1 class="page-title">Documentation</h1>
-			<h2 class="page-description" data-default-text="Getting started? Try our quick guides.">Getting started? Try our quick guides.</h2>
-			{{> breadcrumbs }}
+			<h1 class="page-title">
+                Documentation
+            </h1>
+			<h2 class="page-description" data-start-tip="Getting started? Try our quick guides." data-api-tip="Select an API or Backend platform.">
+                <span>Getting started? Try our quick guides.</span>
+				<a href='#' class='btn btn-red tx-btn-skip'>No, Skip This</a>
+            </h2>
+
+            {{> breadcrumbs }}
+
+
             <div class="clearfix"></div>
+
             {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:quick-guide"}}
 				<ul class="tx-quick-guide-categories tx-unstyled tx-inline">
                     {{#foreach posts}}
                         {{#has tag="platform-category"}}
-							<li data-platform-tip="{{meta 'platform-tip'}}" data-type="{{meta 'type'}}" class="tx-hover">
+							<li data-slug="{{slug}}" data-platform-tip="{{meta 'platform-tip'}}" class="tx-hover">
 								<div class="tx-logo">
 									<figure style="background-image:url({{image}})"></figure>
 								</div>
-								<h5>{{title}}</h5>
+								<h5 class="tx-label">{{title}}</h5>
 								<section>
                                     {{{markdown}}}
 								</section>
@@ -39,7 +48,7 @@
 				<ul class="tx-quick-guide-platforms tx-platforms tx-unstyled tx-inline">
                     {{#foreach posts}}
                         {{#has tag="platform"}}
-							<li data-type="{{meta 'type'}}">
+                            <li data-slug="{{slug}}" data-category-slug="{{meta 'category-slug'}}" data-api-preference="{{meta 'api-preference'}}" {{#has tag="api"}}data-api="true"{{/has}}>
 								<a href="{{slug}}" class="tx-logo {{slug}}{{#if image}} tx-logo-gradient{{else}} tx-logo-generic{{/if}}">
 									<figure {{#if image }}style="background-image:url({{image}})"{{/if}}></figure>
 								</a>
@@ -74,7 +83,7 @@
             {{#get "posts" limit="all" order="title asc" include="tags" filter="tag:sdk"}}
                 {{#foreach posts}}
                     {{#has tag="navigation"}}
-						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+						<h2>{{title}} <span class="tx-tip">{{meta 'tip'}}</span></h2>
                     {{/has}}
                 {{/foreach}}
 				<ul class="tx-unstyled tx-inline tx-platforms clearfix">
@@ -99,7 +108,7 @@
             {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:how-to"}}
                 {{#foreach posts}}
                     {{#has tag="navigation"}}
-						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+						<h2>{{title}} <span class="tx-tip">{{meta 'tip'}}</span></h2>
                     {{/has}}
                 {{/foreach}}
 				<ul class="tx-unstyled tx-inline tx-grid-item tx-how-to clearfix">
@@ -125,7 +134,7 @@
             {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:tml"}}
                 {{#foreach posts}}
                     {{#has tag="navigation"}}
-						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+						<h2>{{title}} <span class="tx-tip">{{meta 'tip'}}</span></h2>
                     {{/has}}
                 {{/foreach}}
 				<ul class="tx-unstyled tx-inline tx-grid-item clearfix">
@@ -151,7 +160,7 @@
             {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:help"}}
                 {{#foreach posts}}
                     {{#has tag="navigation"}}
-						<h2>{{title}} <span>{{meta 'tip'}}</span></h2>
+						<h2>{{title}} <span class="tx-tip">{{meta 'tip'}}</span></h2>
                     {{/has}}
                 {{/foreach}}
 				<ul class="tx-unstyled tx-inline tx-grid-item clearfix">
