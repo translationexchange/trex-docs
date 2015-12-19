@@ -453,6 +453,9 @@ margin on the iframe, cause it breaks stuff. */
 .clearfix:after {
     content: "";
     display: table;
+}
+
+.clearfix:after {
     clear: both;
 }
 
