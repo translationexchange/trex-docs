@@ -53,15 +53,19 @@
         if (hash) showTutorial(hash);
     }
 
-    function init() {
-        // highlight code blocks
+    function highlightCode() {
         $('pre code').each(function (i, block) {
             hljs.highlightBlock(block);
         });
+    }
 
+    function init() {
         var slug = getQueryString('api');
 
-        if (!slug) return;
+        if (!slug) {
+            highlightCode();
+            return;
+        }
 
         var url = ghost.url.api('posts', { filter: 'slug:' + slug });
 
@@ -72,6 +76,7 @@
         promise.always(function () {
             // wire page event handlers
             wire();
+            highlightCode();
         });
     }
 
