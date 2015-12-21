@@ -30,6 +30,7 @@
 
     function wire() {
         $pageSubnav.on('click', function (e) {
+            e.preventDefault();
             showTutorial($(e.target).data('action'));
         });
     }
@@ -44,7 +45,7 @@
         $tut2Title.text(post.title + ' API');
         $tut2Content.html(post.html);
 
-        if (window.location.hash === '#tutorial-2') showTutorial('tutorial-2');
+        if (window.location.hash) showTutorial(window.location.hash);
     }
 
     function init() {

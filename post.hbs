@@ -34,13 +34,14 @@
 				<h1 class="post-title">{{title}}</h1>
 			</header>
 
+            <section class="tx-page-nav">
+                <ul class="tx-unstyled">
+                    <li><a href="#tutorial-1" class="selected" data-action="tutorial-1">{{title}}</a></li>
+                    <li><a href="#tutorial-2" class="tx-tutorial-2-title" data-action="tutorial-2"></a></li>
+                </ul>
+            </section>
+
     		<section class="post-content">
-			    <div class="tx-page-nav">
-				    <ul class="tx-unstyled">
-					    <li><a href="#tutorial-1" class="selected" data-action="tutorial-1">{{title}}</a></li>
-					    <li><a href="#tutorial-2" class="tx-tutorial-2-title" data-action="tutorial-2"></a></li>
-				    </ul>
-			    </div>
                 <div class="tx-tutorial-1-content">
                     {{content}}
                 </div>

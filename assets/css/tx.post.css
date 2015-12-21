@@ -15,7 +15,7 @@
 .post-meta > .tx-post-label:first-child { border-left: none; margin-left: 0; padding-left: 0; }
 
 
-/* page nav */
+/* page nav overrides, see tx.base.css */
 .tx-page-nav { margin-bottom: 3rem; }
 .tx-page-nav ul > li > a { color: #2280D6; }
 .tx-page-nav ul > li > a:hover { color: #44C7F4; }
@@ -37,4 +37,4 @@
 .tx-menu > .panel .panel-collapse.in ~ div { background: red; }
 
 /* post content */
-.tx-api-content { display: none; }
+.tx-tutorial-2-content { display: none; }
