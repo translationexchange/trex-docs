@@ -47,4 +47,4 @@ h2 > .tx-tip { margin-left: 20px; color: #999; letter-spacing: normal; font-size
 .tx-page-nav ul > li > a.selected { border-bottom: solid 1px rgba(0, 0, 0, 0.5); }
 
 /* hovers */
-.tx-hover:hover { background: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1); -webkit-transition: background .1s cubic-bezier(.455, .03, .515, .955); transition: background .1s cubic-bezier(.455, .03, .515, .955); }
+.tx-hover:hover { background: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1); transition: background .1s cubic-bezier(.455, .03, .515, .955); }

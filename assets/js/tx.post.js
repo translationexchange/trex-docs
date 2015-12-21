@@ -1,6 +1,6 @@
 (function ($, window) {
     var $content = $('.content'),
-        $pageSubnav = $content.find('.tx-page-nav'),
+        $pageNav = $content.find('.tx-page-nav'),
         $postTitle = $content.find('.post-title'),
         $tut1Content = $content.find('.tx-tutorial-1-content'),
         $tut2Content = $content.find('.tx-tutorial-2-content'),
@@ -18,18 +18,18 @@
             case 'tutorial-1':
                 $tut1Content.show();
                 $tut2Content.hide();
-                $pageSubnav.find('a').toggleClass('selected');
+                $pageNav.find('a').toggleClass('selected');
                 break;
             case 'tutorial-2':
                 $tut1Content.hide();
                 $tut2Content.show();
-                $pageSubnav.find('a').toggleClass('selected');
+                $pageNav.find('a').toggleClass('selected');
                 break;
         }
     }
 
     function wire() {
-        $pageSubnav.on('click', function (e) {
+        $pageNav.on('click', function (e) {
             e.preventDefault();
             showTutorial($(e.target).data('action'));
         });
@@ -39,13 +39,18 @@
         if (!data) return;
         if (!data.posts || !data.posts[0]) return;
 
-        var post = data.posts[0];
+        var hash = window.location.hash,
+            post = data.posts[0];
 
-        $postTitle.text($postTitle.text() + ' + ' + post.title + ' API');
+        $postTitle.find('span').text(' + ' + post.title + ' API');
+
         $tut2Title.text(post.title + ' API');
+
         $tut2Content.html(post.html);
 
-        if (window.location.hash) showTutorial(window.location.hash);
+        $pageNav.slideDown();
+
+        if (hash) showTutorial(hash);
     }
 
     function init() {
