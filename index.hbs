@@ -28,7 +28,7 @@
 
             <div class="clearfix"></div>
 
-            {{#get "posts" limit="all" order="tags asc" include="tags" filter="tag:quick-guide"}}
+            {{#get "posts" limit="all" order="title asc" include="tags" filter="tag:quick-guide"}}
 				<ul class="tx-quick-guide-categories tx-unstyled tx-inline">
                     {{#foreach posts}}
                         {{#has tag="platform-category"}}
