@@ -54,6 +54,11 @@
     }
 
     function init() {
+        // highlight code blocks
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+
         var slug = getQueryString('api');
 
         if (!slug) return;
@@ -67,10 +72,6 @@
         promise.always(function () {
             // wire page event handlers
             wire();
-            // highlight code blocks
-            $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block);
-            });
         });
     }
 
