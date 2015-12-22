@@ -23,15 +23,17 @@ h2 > .tx-tip { margin-left: 20px; color: #999; letter-spacing: normal; font-size
 .tx-logo.tx-logo-gradient { background: -webkit-linear-gradient(-56deg, #5c666f 0, #648aac 100%); background: linear-gradient(-56deg, #5c666f 0, #648aac 100%); }
 .tx-logo.tx-logo-generic { background: #eaeef3; }
 .tx-logo.tx-logo-generic > figure { background-image: url('../images/platform-generic.svg') }
+
 .tx-logo.android { background: -webkit-linear-gradient(-220deg, #b0d949 23%, #83b830 100%); background: linear-gradient(-220deg, #b0d949 23%, #83b830 100%); }
 .tx-logo.angular { background: -webkit-linear-gradient(-220deg, #008bff 40%, #2c6fad 140%); background: linear-gradient(-220deg, #008bff 40%, #2c6fad 140%); }
 .tx-logo.ember { background: -webkit-linear-gradient(-220deg, #f46642 40%, #9c2202 140%); background: linear-gradient(-220deg, #f46642 40%, #9c2202 140%); }
 .tx-logo.react { background: -webkit-linear-gradient(-220deg, #3a5795 23%, #338bbc 100%); background: linear-gradient(-220deg, #3a5795 23%, #338bbc 100%); }
-.tx-logo.windows-phone { background: -webkit-linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); background: linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); }
-.tx-logo.node { background: -webkit-linear-gradient(-220deg, #78b743 40%, #9fe861 140%); background: linear-gradient(-220deg, #78b743 40%, #9fe861 140%); }
+.tx-logo.windows-phone, .tx-logo.windows { background: -webkit-linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); background: linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); }
+.tx-logo.node, .tx-logo.node-js { background: -webkit-linear-gradient(-220deg, #78b743 40%, #9fe861 140%); background: linear-gradient(-220deg, #78b743 40%, #9fe861 140%); }
 .tx-logo.ruby-on-rails { background: -webkit-linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); background: linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); }
-.tx-logo.vanilla-javascript { background: linear-gradient(-180deg, #f0db4f 0, #edd223 100%); }
-.tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony { background: -webkit-linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); background: linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); }
+.tx-logo.vanilla-javascript, .tx-logo.vanilla-js, .tx-logo.javascript, .tx-logo.js { background: linear-gradient(-180deg, #f0db4f 0, #edd223 100%); }
+.tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony, .tx-logo.laravel, .tx-logo.symfony { background: -webkit-linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); background: linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); }
+
 .tx-logo.android > figure, .tx-logo.ios > figure, .tx-logo.windows-phone > figure { background-size: 40%; }
 .tx-logo.ios > figure { background-position: 48% 47%; }
 
