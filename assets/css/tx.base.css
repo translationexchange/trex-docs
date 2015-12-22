@@ -24,21 +24,26 @@ h2 > .tx-tip { margin-left: 20px; color: #999; letter-spacing: normal; font-size
 .tx-logo.tx-logo-generic { background: #eaeef3; }
 .tx-logo.tx-logo-generic > figure { background-image: url('../images/platform-generic.svg') }
 
+.tx-logo.apache, .tx-logo.apache-struts { background: linear-gradient(-220deg, #f3f3f3 23%, #ceccbb 100%); }
 .tx-logo.android { background: linear-gradient(-220deg, #b0d949 23%, #83b830 100%); }
 .tx-logo.angular { background: linear-gradient(-220deg, #008bff 40%, #2c6fad 140%); }
 .tx-logo.cordova, .tx-logo.apache-cordova { background: linear-gradient(-220deg, #93afc2 23%, #778093 100%); }
+.tx-logo.django, .tx-logo.python-django { background: linear-gradient(-220deg, #44b78b 23%, #0c4b33 100%); }
 .tx-logo.ember { background: linear-gradient(-220deg, #f46642 40%, #9c2202 140%); }
 .tx-logo.ionic { background: linear-gradient(-220deg, #4b7ed1 23%, #4b8bf4 100%); }
+.tx-logo.java, tx.logo.java-enterprise { background: linear-gradient(-220deg, #f83f3f 23%, #a11818 100%); }
 .tx-logo.node, .tx-logo.node-js { background: linear-gradient(-220deg, #78b743 40%, #9fe861 140%); }
 .tx-logo.phonegap { background: linear-gradient(-220deg, #738386 23%, #4e575b 100%); }
 .tx-logo.php, .tx-logo.php-laravel, .tx-logo.php-symfony, .tx-logo.laravel, .tx-logo.symfony { background: linear-gradient(-220deg, #6d7bce 40%, #3b2862 140%); }
 .tx-logo.react { background: linear-gradient(-220deg, #3a5795 23%, #338bbc 100%); }
 .tx-logo.ruby-on-rails { background: linear-gradient(-220deg, #ff0046 23%, #951a3c 100%); }
+.tx-logo.spring, .tx-logo.pivotal-spring { background: linear-gradient(-220deg, #57a343 23%, #757149 100%); }
 .tx-logo.vanilla-javascript, .tx-logo.vanilla-js, .tx-logo.javascript, .tx-logo.js { background: linear-gradient(-180deg, #f0db4f 0, #edd223 100%); }
 .tx-logo.windows-phone, .tx-logo.windows { background: linear-gradient(-220deg, #68217a 23%, #9b62a9 100%); }
 
-.tx-logo.android > figure, .tx-logo.ios > figure, .tx-logo.windows-phone > figure { background-size: 40%; }
-.tx-logo.ios > figure { background-position: 48% 47%; }
+.tx-logo.apache > figure, .tx-logo.apache-struts > figure, .tx-logo.django > figure, .tx-logo.python-django > figure { background-size: 63%; }
+.tx-logo.android > figure, .tx-logo.ios > figure, .tx-logo.apple > figure, .tx-logo.windows-phone > figure, .tx-logo.windows > figure { background-size: 40%; }
+.tx-logo.ios > figure, .tx-logo.apple > figure { background-position: 48% 47%; }
 
 /* breadcrumbs */
 .tx-breadcrumbs { display: inline-block; font-size: 14px; }
