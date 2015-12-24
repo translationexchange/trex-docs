@@ -29,7 +29,7 @@
             $breadcrumbs.hide();
         },
         show: function () {
-            $breadcrumbs.fadeIn().css('display', 'inline-block');
+            $breadcrumbs.show().css('display', 'inline-block');
         },
         remove: function ($el) {
             // remove icon
@@ -83,7 +83,10 @@
             $categories.hide();
         },
         show: function () {
-            $categories.fadeIn();
+            // hide skip button
+            description.hideSkip();
+            // show cats
+            $categories.show();
         },
         update: function (slug) {
             categories.$active = $categories.find('[data-slug=' + slug + ']');
@@ -121,6 +124,8 @@
         show: function (category) {
             var $selectedPlatforms = $platforms.find('[data-category-slug=' + category + ']');
 
+            // hide categories
+            categories.hide();
             // update breadcrumbs
             breadcrumbs.addCategory(category);
             // update page description
@@ -131,16 +136,18 @@
             description.hideSkip();
             // show breadcrumbs
             breadcrumbs.show();
-            // hide categories
-            categories.hide();
+            // show platforms container if hidden
+            if (!$platforms.is(':visible')) $platforms.show();
             // hide all visible platforms
             platforms.hide();
             // show selected platforms
-            $selectedPlatforms.fadeIn();
+            $selectedPlatforms.show();
         },
         showApi: function (category, platform) {
             var $selectedPlatforms = $platforms.find('[data-api]');
 
+            // hide categories
+            categories.hide();
             // update breadcrumbs
             breadcrumbs.addPlatform(category, platform);
             // update page description
@@ -151,6 +158,8 @@
             if (platforms.getApiPreference(platform) === 'optional') description.showSkip(platform);
             // show breadcrumbs
             breadcrumbs.show();
+            // show platforms container if hidden
+            if (!$platforms.is(':visible')) $platforms.show();
             // hide all visible platforms
             platforms.hide();
             // show selected platforms
@@ -158,7 +167,7 @@
                 var $el = $(this);
 
                 $el.find('a').attr('href', '/' + platform + '?api=' + $el.data('slug'));
-                $el.fadeIn();
+                $el.show();
             });
         },
         update: function (slug) {
@@ -223,18 +232,22 @@
         setup: function () {
             var parsed = hash.parse();
 
+            // has has both category and platform
             if (parsed.category && parsed.platform) {
                 platforms.showApi(parsed.category, parsed.platform);
                 return;
             }
 
+            // hash has category only
             if (parsed.category) {
                 platforms.show(parsed.category);
                 return;
             }
 
+            // hash has some other value
             if (parsed.other) return;
 
+            // no hash
             ui.reset();
         },
         reset: function () {
@@ -261,14 +274,17 @@
     };
 
     function init() {
+        // cache categories and platforms
         categories.cache();
         platforms.cache();
 
+        // wire shit
         breadcrumbs.wire();
         categories.wire();
         hash.wire();
         platforms.wire();
 
+        // setup ui
         ui.setup();
     }
 
