@@ -1,7 +1,7 @@
 (function ($, window) {
-    var $content = $('.content'),
+    var $content = $('.tx-content'),
         $pageNav = $content.find('.tx-page-nav'),
-        $postTitle = $content.find('.post-title'),
+        $postTitle = $content.find('.tx-post-title'),
         $tut1Content = $content.find('.tx-tutorial-1-content'),
         $tut2Content = $content.find('.tx-tutorial-2-content'),
         $tut2Title = $content.find('.tx-tutorial-2-title');

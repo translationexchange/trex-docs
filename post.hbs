@@ -6,11 +6,11 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-	<header class="main-header post-head no-cover">
-		<nav class="main-nav clearfix">
+	<header class="tx-main-header tx-post-header">
+		<nav class="tx-main-nav clearfix">
 			<div class="inner">
                 {{#if @blog.logo}}
-					<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
+					<a class="tx-blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
                 {{/if}}
                 {{#if @blog.navigation }}
                     {{navigation}}
@@ -24,14 +24,14 @@
 		</nav>
 	</header>
 
-	<main class="content" role="main">
-		<article class="{{post_class}}">
+	<main class="tx-content" role="main">
+		<article class="tx-post">
 			<nav>
                 {{> menu }}
 			</nav>
 
-			<header class="post-header">
-				<h1 class="post-title">{{title}} <span></span></h1>
+			<header class="tx-post-header">
+				<h1 class="tx-post-title">{{title}} <span></span></h1>
 			</header>
 
             <section class="tx-page-nav">
@@ -41,7 +41,7 @@
                 </ul>
             </section>
 
-    		<section class="post-content">
+    		<section class="tx-post-content">
                 <div class="tx-tutorial-1-content">
                     {{content}}
                 </div>
@@ -50,7 +50,7 @@
                 </div>
 			</section>
 
-			<footer class="post-footer">
+			<footer class="tx-post-footer">
 
 			</footer>
 		</article>
