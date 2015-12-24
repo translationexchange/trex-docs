@@ -224,7 +224,7 @@ code, tt {
     background: #F7FAFB;
     white-space: pre-wrap;
     font-size: 0.85em;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 pre {
     overflow: auto;
@@ -238,14 +238,13 @@ pre {
     background: #F7FAFB;
     white-space: pre;
     font-size: 0.9em;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 pre code, pre tt {
     padding: 0;
     border: none;
     background: transparent;
     white-space: pre-wrap;
-    font-size: inherit;
 }
 kbd {
     display: inline-block;
@@ -309,6 +308,7 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    Utilities - These things get used a lot
    ========================================================================== */
+
 /* Clears shit */
 .clearfix:before,
 .clearfix:after { display: table; content: " "; }
@@ -319,3 +319,10 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Content centered and nicely scaled */
 .inner { position: relative; margin: 0 auto; max-width: 990px; width: 80%; }
+
+/* ==========================================================================
+   Highlight JS overrides, remove this for exact theme CSS
+   ========================================================================== */
+
+pre > code.hljs { background: #F7FAFB; }
+pre > code { border: solid 5px rgba(0, 0, 0, .05) }
