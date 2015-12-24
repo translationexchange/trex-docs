@@ -1,7 +1,7 @@
 (function ($, window, document) {
     var $breadcrumbs = $('.tx-breadcrumbs'),
         $categories = $('.tx-quick-guide-categories'),
-        $description = $('.page-description'),
+        $description = $('.tx-page-description'),
         $platforms = $('.tx-quick-guide-platforms'),
         cache = { categories: [], platforms: [] },
         quickGuideHash = '#quick-guide-';
@@ -261,15 +261,19 @@
     };
 
     var description = {
+        $skipBtn: $description.find('.tx-btn-skip'),
         update: function (text, label) {
             if (label) text = $description.data(label);
             $description.find('span').text(text);
         },
         showSkip: function (slug) {
-            $description.find('.tx-btn-skip').attr('href', slug).show();
+            console.info('attempting to show skip button...');
+            console.info(description.$skipBtn);
+            description.$skipBtn.attr('href', slug).show();
         },
         hideSkip: function () {
-            $description.find('.tx-btn-skip').hide();
+            console.info('attempting to hide skip button...');
+            description.$skipBtn.hide();
         }
     };
 

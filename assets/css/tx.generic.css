@@ -38,7 +38,8 @@ ul.tx-inline > li { display: inline-block; }
 .tx-site-footer .tx-copyright { text-align: center; }
 .tx-main-header { background: #f5f8fa; }
 .tx-main-header-content { min-height: 400px; padding: 40px 0 20px; text-align: center; }
-.tx-page-description { margin: 0 0 20px; color: rgba(0, 0, 0, .5); letter-spacing: 0.01rem; font-size: 2rem; font-size: 1.5em; }
+.tx-page-title, .tx-page-description { animation-name: fade-in; animation-duration: .5s; }
+.tx-page-description { margin: 0 0 20px; color: rgba(0, 0, 0, .5); letter-spacing: 0.01rem; font-size: 1.3em; }
 
 /* blog logo */
 .tx-blog-logo { display: block; float: left; border: none !important; background: none !important; }

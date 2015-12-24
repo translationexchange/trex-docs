@@ -37,7 +37,7 @@ h2 { margin-bottom:30px; }
 .tx-grid.tx-how-to > li > a > i { padding: 10px 14px; border: solid 1px #999; border-radius: 50%; color: #555; font-size: 18px; }
 
 /* skip button */
-.tx-btn-skip { display: none; margin-left: 10px; }
+.tx-btn-skip { display: none; margin-left: 10px; letter-spacing: 0.05em; font-size: 1.35rem; }
 
 
 
