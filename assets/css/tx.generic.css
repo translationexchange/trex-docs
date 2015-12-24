@@ -33,6 +33,9 @@ ul.tx-inline > li { display: inline-block; }
    ========================================================================== */
 
 .tx-site-wrapper { min-height: 100%; background: #fff; transition: transform 0.5s ease; }
+.tx-site-footer { margin: 4rem 0 0; padding: 2rem; font-size: 1.3rem; }
+.tx-site-footer a { text-decoration: none; }
+.tx-site-footer .tx-copyright { text-align: center; }
 .tx-main-header { background: #f5f8fa; }
 .tx-main-header-content { min-height: 400px; padding: 40px 0 20px; text-align: center; }
 .tx-page-description { margin: 0 0 20px; color: rgba(0, 0, 0, .5); letter-spacing: 0.01rem; font-size: 2rem; font-size: 1.5em; }
@@ -63,7 +66,7 @@ ul.tx-inline > li { display: inline-block; }
 .tx-logo.ember { background: linear-gradient(-220deg, #f46642 40%, #9c2202 140%); }
 .tx-logo.ionic { background: linear-gradient(-220deg, #4b7ed1 23%, #4b8bf4 100%); }
 .tx-logo.java,
-tx.logo.java-enterprise { background: linear-gradient(-220deg, #f83f3f 23%, #a11818 100%); }
+.tx.logo.java-enterprise { background: linear-gradient(-220deg, #f83f3f 23%, #a11818 100%); }
 .tx-logo.node,
 .tx-logo.node-js { background: linear-gradient(-220deg, #78b743 40%, #9fe861 140%); }
 .tx-logo.phonegap { background: linear-gradient(-220deg, #738386 23%, #4e575b 100%); }
