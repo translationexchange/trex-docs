@@ -1,4 +1,7 @@
-(function ($, window) {
+/**
+ * codeHighlighter could be Prism or HighlightJS
+ */
+(function ($, window, codeHighlighter) {
     var $content = $('.tx-content'),
         $pageNav = $content.find('.tx-page-nav'),
         $postTitle = $content.find('.tx-post-title'),
@@ -55,7 +58,7 @@
 
     function highlightCode() {
         $('pre code').each(function (i, block) {
-            hljs.highlightBlock(block);
+            codeHighlighter.highlightElement(block);
         });
     }
 
@@ -81,4 +84,4 @@
     }
 
     return init();
-})(jQuery, window);
+})(jQuery, window, Prism);

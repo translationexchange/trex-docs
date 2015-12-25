@@ -31,8 +31,8 @@
     {{/is}}
     {{#is "post"}}
 	    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.collapse.css"}}"/>
+	    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}"/>
 	    <link rel="stylesheet" type="text/css" href="{{asset "css/tx.post.css"}}"/>
-	    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/solarized-light.min.css">
     {{/is}}
 
     {{! Ghost outputs important style and meta data with this tag }}
@@ -61,10 +61,10 @@
 	    <script type="text/javascript" src="{{asset "js/tx.index.js"}}"></script>
     {{/is}}
     {{#is "post"}}
-	    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
 	    <script type="text/javascript" src="{{asset "js/bootstrap.collapse.min.js"}}"></script>
+	    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 	    <script type="text/javascript" src="{{asset "js/tx.menu.js"}}"></script>
-        <script type="text/javascript" src="{{asset "js/tx.post.js"}}"></script>
+	    <script type="text/javascript" src="{{asset "js/tx.post.js"}}"></script>
     {{/is}}
 
     {{! Ghost outputs important scripts and data with this tag }}

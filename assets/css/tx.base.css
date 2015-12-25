@@ -30,7 +30,7 @@ hr {
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
-samp { font-size: 1em; font-family: monospace, serif; }
+samp { font-size: 1.3rem; font-family: monospace, serif; }
 pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
@@ -217,49 +217,6 @@ blockquote cite a { font-weight: normal; }
 mark {
     background-color: #fdffb6;
 }
-code, tt {
-    padding: 1px 3px;
-    border: #E3EDF3 1px solid;
-    border-radius: 2px;
-    background: #F7FAFB;
-    white-space: pre-wrap;
-    font-size: 0.85em;
-    font-family: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-pre {
-    overflow: auto;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 0 1.75em 0;
-    padding: 10px;
-    width: 100%;
-    border: #E3EDF3 1px solid;
-    border-radius: 3px;
-    background: #F7FAFB;
-    white-space: pre;
-    font-size: 0.9em;
-    font-family: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-pre code, pre tt {
-    padding: 0;
-    border: none;
-    background: transparent;
-    white-space: pre-wrap;
-}
-kbd {
-    display: inline-block;
-    margin-bottom: 0.4em;
-    padding: 1px 8px;
-    border: #CCC 1px solid;
-    border-radius: 4px;
-    background: #F4F4F4;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2),
-    0 1px 0 0 #fff inset;
-    color: #666;
-    text-shadow: #FFF 0 1px 0;
-    font-weight: 700;
-    font-size: 0.9em;
-}
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -319,10 +276,3 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Content centered and nicely scaled */
 .inner { position: relative; margin: 0 auto; max-width: 990px; width: 80%; }
-
-/* ==========================================================================
-   Highlight JS overrides, remove this for exact theme CSS
-   ========================================================================== */
-
-pre > code.hljs { background: #F7FAFB; }
-pre > code { border: solid 5px rgba(0, 0, 0, .05) }
